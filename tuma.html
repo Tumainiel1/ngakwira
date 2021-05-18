@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: #f2f2f2;}
+#News {background-color: #f2f2f2;}
+#Contact {background-color: #f2f2f2; }
+#About {background-color: #f2f2f2;}
+
+.n1{
+background-color: #000033;
+padding:10px;
+border-radius: 15px;
+
+}
+li{
+  padding:6px;
+  color:white;
+}
+
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'red')" id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'red')" >News</button>
+<button class="tablink" onclick="openPage('Contact', this, 'red')">Contact</button>
+<button class="tablink" onclick="openPage('About', this, 'red')">About</button>
+
+<div id="Home" class="tabcontent">
+  <h3 style="font-size: 50px;">Hey I'm TUMAINIEL NGAKWIRA</h3>
+  <p><strong>I studies Bachelor of Science in computer Science in University of Dar es salaam,
+    my ambition is to be problem solver in prloblems concerning with science and technology.</strong></p>
+   <h3>My service Are:</h3>
+   <div class="n1">
+    <ul style="list-style: none;">
+     <li>website design</li>
+     <li>Search Engine Optimization</li>
+     <li>Graphic Design</li>
+   </ul>
+   </div>
+</div>
+<div id="News" class="tabcontent">
+  <h3>News</h3>
+  <p>No News YET! Enjoy</p> 
+</div>
+
+
+<div id="Contact" class="tabcontent">
+  <h3>Here below are my personal concacts: <br><br>
+    <a href ="mailto: tumainielngakwira@gmail.com">tumainielngakwira@gmail.com</a>
+    <br><br>
+    <a href="tel:0687505994">0687505994 /</a><br>
+    <a href="tel:0788568050">0788568050</a>
+  </h3>
+  <p><b>Get in touch</b></p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h2>Education Background</h2>
+  <h3>Primary level</h3>
+  <p>GILMAN RUTIHINDA PRIMARY SCHOOL (2007-2013)</p>
+  <h3>O Level</h3>
+  <p>KIBASILA SECONDARY SCHOOL(2014-2017)</p>
+  <h3>A Level</h3>
+  <p>BENJAMINI MKAPA SECONDARY SCHOOL(2018-2020)</p>
+
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
